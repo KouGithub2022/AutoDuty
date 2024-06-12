@@ -11,7 +11,7 @@ namespace AutoDuty.Helpers
         {
             private const BindingFlags All = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static;
 
-            internal static bool RotationSolverEnabled => DalamudReflector.TryGetDalamudPlugin("RotationSolver", out _, false, true);
+            internal static bool RotationSolverEnabled => DalamudReflector.TryGetDalamudPlugin("RotationSolver", out _, false, true) || DalamudReflector.TryGetDalamudPlugin("RotationSolver_old", out _, false, true);
 
             internal static bool GetState => DalamudReflector.TryGetDalamudPlugin("RotationSolver", out var pl, false, true) && (bool)Assembly.GetAssembly(pl.GetType()).GetType("RotationSolver.Commands.RSCommands").GetField("_lastState", All).GetValue(null);
 
