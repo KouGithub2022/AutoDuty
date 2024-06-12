@@ -27,8 +27,8 @@ public class MainWindow : Window, IDisposable
         
         TitleBarButtons.Add(new() { Icon = FontAwesomeIcon.Cog, IconOffset = new(1, 1), Click = _ => OpenTab("Config") });
         TitleBarButtons.Add(new() { ShowTooltip = () => ImGui.SetTooltip("Support Herculezz on Ko-fi"), Icon = FontAwesomeIcon.Heart, IconOffset = new(1, 1), Click = _ => GenericHelpers.ShellStart("https://ko-fi.com/Herculezz") });
-        KoFiButton.DonateLink = "https://ko-fi.com/Herculezz";
-        KoFiButton.Text = "Support AutoDuty";
+        //KoFiButton.DonateLink = "https://ko-fi.com/Herculezz";
+        //KoFiButton.Text = "Support AutoDuty";
     }
 
     internal void OpenTab(string tabName)
